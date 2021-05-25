@@ -46,12 +46,16 @@ long ActiveJiffies();
 long ActiveJiffies(int pid);
 long IdleJiffies();
 
+typedef struct CpuAndTime {
+  float cpu_usage, uptime_in_seconds;
+} CpuAndTime;
+
 // Processes
 std::string Command(int pid);
 std::string Ram(int pid);
 std::string Uid(int pid);
-std::string User(int pid);
-long int UpTime(int pid);
+std::string User(std::string user_id_to_find);
+CpuAndTime compute_cpu_usage(int pid);
 };  // namespace LinuxParser
 
 #endif

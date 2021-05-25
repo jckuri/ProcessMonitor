@@ -9,7 +9,7 @@
 
 class System {
  public:
-  Processor& Cpu();                   // TODO: See src/system.cpp
+  Processor Cpu();                   // TODO: See src/system.cpp
   std::vector<Process>& Processes();  // TODO: See src/system.cpp
   float MemoryUtilization();          // TODO: See src/system.cpp
   long UpTime();                      // TODO: See src/system.cpp
@@ -23,5 +23,13 @@ class System {
   Processor cpu_ = {};
   std::vector<Process> processes_ = {};
 };
+
+#define whitespaces " \t\n\r\f\v"
+
+std::string open_text_file(std::string filename);
+std::string grep(std::string string0, std::string pattern);
+std::string isolate_string(std::string line, std::string left_pattern, std::string right_pattern);
+std::string substring(std::string s, std::size_t index0, std::size_t index1);
+long pick_long(std::string s, std::size_t index0, std::size_t index1);
 
 #endif
