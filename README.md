@@ -21,6 +21,10 @@ Run the project:
 ./build/monitor
 ```
 
+This is what you will see if you run this project on Ubuntu:
+
+![images/my_monitor.png](images/my_monitor.png)
+
 # CppND-System-Monitor
 
 Starter code for System Monitor Project in the Object Oriented Programming Course of the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). 
